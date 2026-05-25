@@ -15,7 +15,6 @@ function App() {
   const [isScrollingBlocked, setIsScrollingBlocked] = useState(true);
   const [scrollY, setScrollY] = useState(0);
   const [isArrowVisible, setArrowVisible] = useState(true);
-  // Переименовали imagesLoaded в appReady, так как теперь мы ждем и шрифты тоже
   const [appReady, setAppReady] = useState(false); 
   const [animateLeftRight, setAnimateLeftRight] = useState(false);
 
@@ -39,28 +38,24 @@ function App() {
     config: { tension: 220, friction: 20 },
   });
 
-  // Идеальная загрузка: Картинки + Шрифты
   useEffect(() => {
     const images = [ripped, left, right, lera, mark, flower, tree, heart, mainph];
     
-    // Создаем промисы для всех картинок
     const imagePromises = images.map((src) => {
       return new Promise((resolve) => {
         const img = new Image();
         img.src = src;
         img.onload = resolve;
-        img.onerror = resolve; // Ошибка загрузки одной картинки не должна сломать весь сайт
+        img.onerror = resolve;
       });
     });
 
-    // Ждем выполнения ВСЕХ промисов картинок И загрузки шрифтов браузером
     Promise.all([...imagePromises, document.fonts.ready]).then(() => {
       setAppReady(true);
       setTimeout(() => setAnimateLeftRight(true), 100);
     });
   }, []);
 
-  // Блокировка скролла теперь зависит от appReady
   useEffect(() => {
     if (appReady) {
       const timer = setTimeout(() => {
@@ -70,7 +65,6 @@ function App() {
     }
   }, [appReady]);
 
-  // Скролл
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -93,21 +87,11 @@ function App() {
     window.scrollTo(0, 0);
   }, []);
 
-  // ЭКРАН ЗАГРУЗКИ (Показываем, пока качаются картинки и шрифты)
   if (!appReady) {
     return (
-      <div style={{
-        display: 'flex',
-        height: '100vh',
-        width: '100vw',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#1f2203',
-        color: '#9a997b',
-        fontFamily: 'sans-serif', 
-        fontSize: '30px'
-      }}>
-        Loading...
+      <div className="loader-wrapper">
+        <div className="shimmering-ring"></div>
+        <div className="loader-text">Загрузка</div>
       </div>
     );
   }
@@ -128,7 +112,7 @@ function App() {
         </div>
         <div className='des'>
           <a className='WadimUlya'>Wadim & Uliana</a>
-          <a className='date'>03.10.2025</a>
+          <a className='date'>21.06.2026</a>
         </div>
         {isArrowVisible && (
           <div className="scroll-indicator">
@@ -240,7 +224,7 @@ function App() {
       </div>
       
       <div className='seeU'>
-        <div className='seeUText'>До встречи в октябре <br /> 21.06</div>
+        <div className='seeUText'>До встречи в июне <br /> 21.06</div>
       </div>
       
       <div className='last'>

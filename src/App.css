@@ -688,3 +688,63 @@ legend {
 input[type='file'] {
 	max-width: 100%;
 }
+
+.loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2203;
+  gap: 24px;
+}
+
+.shimmering-ring {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: relative;
+  background: conic-gradient(from 0deg, transparent 0%, transparent 40%, #9a997b 100%);
+  animation: spin 1.2s linear infinite;
+  box-shadow: 0 0 20px rgba(154, 153, 123, 0.4);
+}
+
+.shimmering-ring::before {
+  content: "";
+  position: absolute;
+  inset: 4px; /* Толщина кольца */
+  background-color: #1f2203;
+  border-radius: 50%;
+}
+
+.shimmering-ring::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #fee4cb;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 5px rgba(254, 228, 203, 0.6);
+  transform: translateX(-50%);
+}
+
+.loader-text {
+  color: #9a997b;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  animation: pulse-text 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse-text {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; text-shadow: 0 0 8px rgba(154, 153, 123, 0.5); }
+}
