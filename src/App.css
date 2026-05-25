@@ -365,6 +365,9 @@
     font-family: 'Shippori Mincho B1', serif;
     font-weight: 400;
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .dividerSecond{
@@ -572,7 +575,7 @@
 .bone{
     width: 50px;
     height: 50px;
-    background-color: #E5D7C4;
+    background-color: #d6c4ab;
     border-radius: 50px;
 }
 
@@ -596,7 +599,6 @@
     justify-content: space-between;
 }
 
-/* Reset and base styles  */
 * {
 	padding: 0px;
 	margin: 0px;
@@ -609,7 +611,6 @@
 	box-sizing: border-box;
 }
 
-/* Links */
 
 a, a:link, a:visited  {
     text-decoration: none;
@@ -619,7 +620,6 @@ a:hover  {
     text-decoration: none;
 }
 
-/* Common */
 
 aside, nav, footer, header, section, main {
 	display: block;
@@ -647,7 +647,6 @@ address {
   font-style: normal;
 }
 
-/* Form */
 
 input, textarea, button, select {
 	font-family: inherit;
@@ -713,7 +712,7 @@ input[type='file'] {
 .shimmering-ring::before {
   content: "";
   position: absolute;
-  inset: 4px; /* Толщина кольца */
+  inset: 4px;
   background-color: #1f2203;
   border-radius: 50%;
 }
@@ -747,4 +746,114 @@ input[type='file'] {
 @keyframes pulse-text {
   0%, 100% { opacity: 0.4; }
   50% { opacity: 1; text-shadow: 0 0 8px rgba(154, 153, 123, 0.5); }
+}
+
+.mainText {
+    font-size: clamp(60px, 10vw, 120px);
+}
+.WadimUlya {
+    font-size: clamp(50px, 8vw, 90px);
+}
+.wedday {
+    top: clamp(100px, 10vh, 180px);
+}
+.inviteTitle, .titleProgramm, .placeTitle, .detailsTitle, .titleDress {
+    font-size: clamp(40px, 6vw, 70px);
+}
+.fourTitle {
+    font-size: clamp(30px, 5vw, 50px);
+}
+.inviteText, .placetext, .detailsText, .dressText, .section {
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.6;
+}
+
+.inviteText, .placetext, .detailsText, .dressText {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: #121401;
+    }
+    
+    .app {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #1f2203;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+        position: relative;
+    }
+
+    .programSections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px 40px;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .section {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .time {
+        flex: 0 0 60px;
+    }
+
+    .calendar {
+        width: 450px;
+    }
+    
+    .week span {
+        padding: 12px 0;
+        font-size: 22px;
+    }
+    
+    .day {
+        font-size: 45px;
+    }
+
+    .colors span {
+        width: 60px;
+        height: 60px;
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: crosshair;
+    }
+
+    .colors span:hover {
+        transform: scale(1.15);
+    }
+
+    .colors {
+        gap: 20px;
+    }
+
+    .details {
+        padding: 60px 40px;
+    }
+}
+
+.flower {
+    top: clamp(-750px, -145vw, -300px); 
+    width: clamp(180px, 30vw, 250px);
+}
+
+@media (min-width: 768px) {
+    .flower {
+        top: -78vw; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .flower {
+        top: -750px; 
+    }
 }
