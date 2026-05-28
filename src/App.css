@@ -239,6 +239,7 @@
     margin-right: 0;
     background-size: cover;
     background-repeat: no-repeat;
+    opacity: 0.7;
 }
 .titleProgramm{
     display: flex;
@@ -388,7 +389,7 @@
     font-weight: 600;
     font-size: 30px;
     padding-top: 20px;
-    background-image: url('https://i.pinimg.com/webp/1200x/66/97/82/669782cd9d75d4fed64402372e58b84e.webp');
+    background-image: url('https://img.goodfon.ru/wallpaper/big/0/d9/vesna-pole-rassvet-utro.webp');
     background-size: cover;
     border-radius: 20px 20px 0px 0px;
     margin-top: 40px;
@@ -397,6 +398,10 @@
 .seeUText{
     color: white;
     opacity: 1;
+    font-family: "WindSong", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
 }
 
 /* .last{
@@ -850,10 +855,16 @@ input[type='file'] {
     .flower {
         top: -78vw; 
     }
+    .seeU{
+        background-size: cover;
+    }
 }
 
 @media (min-width: 1024px) {
     .flower {
         top: -750px; 
+    }
+    .seeU{
+        background-size: cover;
     }
 }
