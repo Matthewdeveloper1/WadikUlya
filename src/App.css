@@ -369,7 +369,11 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    list-style-type: none; /* убирает цифры и маркеры */
+    margin: 0;             /* обнуляет внешние отступы */
+    padding: 0; 
 }
+
 
 .dividerSecond{
     width: 70%; /* Width of the border */
