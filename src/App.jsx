@@ -173,7 +173,7 @@ function App() {
             Wedding<br /> Program
           </h1>
           <div className='programSections'>
-            <p className='section'><span className='time'>13:30</span><span className='divider'></span><span className='event'>Сбор гостей</span></p>
+            <p className='section'><span className='time'>13:00</span><span className='divider'></span><span className='event'>Сбор гостей</span></p>
             <p className='section'><span className='time'>14:00</span><span className='divider'></span><span className='event'>Бракосочетание </span></p>
             <p className='section'><span className='time'>14:30</span><span className='divider'></span><span className='event'>Поздравления</span></p>
             <p className='section'><span className='time'>15:30</span><span className='divider'></span><span className='event'>Банкет</span></p>
@@ -198,7 +198,7 @@ function App() {
           <br/>
           3. Если Вы планируете подготовить креативный номер, который требует подготовки, Вы можете связаться с нашим ведущим Василием +375297458876, он поможет с организацией!<br />
           <br/>
-          4. Просим подтвердить Ваше присутствие на нашем празднике до 01.06.2026.<br />
+          4. Просим подтвердить Ваше присутствие на нашем празднике до 10.06.2026.<br />
           <br/>
           5. Цветовая гамма нашей свадьбы представлена ниже, просим поддержать ее при выборе Вашего наряда:
         </span>
@@ -218,7 +218,6 @@ function App() {
                   <span className='kombu'> </span>
                   <span className='moss'> </span>
                   <span className='tan'> </span>
-                  <span className='bone'> </span>
                 </div>
               </div>
             </div>
