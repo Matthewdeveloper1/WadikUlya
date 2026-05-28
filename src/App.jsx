@@ -174,15 +174,15 @@ function App() {
           </h1>
           <div className='programSections'>
             <p className='section'><span className='time'>13:30</span><span className='divider'></span><span className='event'>Сбор гостей</span></p>
-            <p className='section'><span className='time'>14:00</span><span className='divider'></span><span className='event'>бракосочетание </span></p>
-            <p className='section'><span className='time'>14:30</span><span className='divider'></span><span className='event'>поздравления</span></p>
-            <p className='section'><span className='time'>15:30</span><span className='divider'></span><span className='event'>банкет</span></p>
-            <p className='section'><span className='time'>16:00</span><span className='divider'></span><span className='event'>программа</span></p>
-            <p className='section'><span className='time'>16:30</span><span className='divider'></span><span className='event'>перерыв</span></p>
-            <p className='section'><span className='time'>17:00</span><span className='divider'></span><span className='event'>программа</span></p>
-            <p className='section'><span className='time'>18:30</span><span className='divider'></span><span className='event'>перерыв</span></p>
-            <p className='section'><span className='time'>19:00</span><span className='divider'></span><span className='event'>программа</span></p>
-            <p className='section'><span className='time'>20:30</span><span className='divider'></span><span className='event'>завершение</span></p>
+            <p className='section'><span className='time'>14:00</span><span className='divider'></span><span className='event'>Бракосочетание </span></p>
+            <p className='section'><span className='time'>14:30</span><span className='divider'></span><span className='event'>Поздравления</span></p>
+            <p className='section'><span className='time'>15:30</span><span className='divider'></span><span className='event'>Банкет</span></p>
+            <p className='section'><span className='time'>16:00</span><span className='divider'></span><span className='event'>Программа</span></p>
+            <p className='section'><span className='time'>16:30</span><span className='divider'></span><span className='event'>Перерыв</span></p>
+            <p className='section'><span className='time'>17:00</span><span className='divider'></span><span className='event'>Программа</span></p>
+            <p className='section'><span className='time'>18:30</span><span className='divider'></span><span className='event'>Перерыв</span></p>
+            <p className='section'><span className='time'>19:00</span><span className='divider'></span><span className='event'>Программа</span></p>
+            <p className='section'><span className='time'>20:30</span><span className='divider'></span><span className='event'>Завершение</span></p>
           </div>
         </div>
       </div>
