@@ -162,7 +162,7 @@ function App() {
         <h1 className='placeTitle'>Location</h1>
         <img className='tree' src={tree} alt='tree' />
         <p className='placetext'>
-          Cвадьба пройдет в Агроусадьбе «Семисоны»
+          Cвадьба пройдет в Агроусадьбе «Семисоcны»
           Она находится по адресу:
           д. Семисосны, 6/1
         </p>
